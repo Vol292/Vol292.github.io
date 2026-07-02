@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Hyiaman | Software Engineer, Data Analyst & Startup Founder</title>
+  <meta name="description"
+    content="Portfolio of Hyiaman - a multi-disciplinary Software Engineer (PHP, React, Django), Data Analyst (PowerBI, SQL, Excel), and Startup Founder.">
+  <meta name="keywords"
+    content="Software Engineer, Data Analyst, Startup Founder, PHP, React, Laravel, Python, Django, PowerBI, SQL, Excel, Portfolio">
+  <meta name="author" content="Hyiaman">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hyiaman.me/">
+  <meta property="og:title" content="Hyiaman | Portfolio">
+  <meta property="og:description"
+    content="Explore the portfolio of Hyiaman: Builder, Analyst, and Founder. Toggle perspectives to view selected work.">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hyiaman.me/">
+  <meta property="twitter:title" content="Hyiaman | Portfolio">
+  <meta property="twitter:description" content="Explore the portfolio of Hyiaman: Builder, Analyst, and Founder.">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-dev">
+
+  <!-- Ambient Glow Background Decoration -->
+  <div class="ambient-glow glow-top-right" id="glow-1"></div>
+  <div class="ambient-glow glow-bottom-left" id="glow-2"></div>
+
+  <!-- --- HEADER & NAVIGATION --- -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo" id="site-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span>hyiaman.me</span>
+      </a>
+
+      <!-- Dynamic Perspective Toggle Switch -->
+      <div class="perspective-switch" role="radiogroup" aria-label="Choose Website Perspective">
+        <button class="switch-btn active" id="btn-dev" data-mode="dev" role="radio" aria-checked="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          Engineer
+        </button>
+        <button class="switch-btn" id="btn-analyst" data-mode="analyst" role="radio" aria-checked="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          Analyst
+        </button>
+        <button class="switch-btn" id="btn-founder" data-mode="founder" role="radio" aria-checked="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          Founder
+        </button>
+        <div class="switch-slider" id="switch-slider"></div>
+      </div>
+
+      <nav>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#hero" class="active" id="nav-link-home">Home</a></li>
+          <li><a href="#showcase" id="nav-link-showcase">Projects</a></li>
+          <li><a href="#skills" id="nav-link-skills">Skills</a></li>
+          <li><a href="#experience" id="nav-link-experience">Timeline</a></li>
+          <li><a href="#contact" id="nav-link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-mobile" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- --- MAIN CONTENT --- -->
+  <main>
+
+    <!-- --- HERO SECTION --- -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text-content">
+            <div class="hero-tag" id="hero-tag-text">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>DEVELOPER PERSPECTIVE</span>
+            </div>
+            <h1 class="hero-title">
+              Crafting scalable digital solutions as a <br>
+              <span class="role-text" id="hero-title-role">Software Engineer</span>
+            </h1>
+            <p class="hero-desc" id="hero-desc-text">
+              Building dynamic applications, robust APIs, and high-performance services using React, Laravel, Django,
+              and modern cloud technologies.
+            </p>
+            <div class="hero-cta">
+              <a href="#showcase" class="btn btn-primary" id="cta-primary">
+                View Projects
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary" id="cta-secondary">Get In Touch</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-canvas-container">
+              <div class="visual-backdrop"></div>
+              <div class="visual-card" id="hero-visual-card">
+                <!-- Floating content changed by JS -->
+                <div style="font-size: 0.8rem; opacity: 0.5; margin-bottom: 5px;" id="visual-card-sub">PORTFOLIO INDEX
+                  //</div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 10px;" id="visual-card-title">System
+                  Architecture</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;" id="visual-card-body">
+                  Designing backend architectures that support heavy traffic, process millions of rows, and maintain
+                  99.9% uptime.</p>
+                <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between;">
+                  <span
+                    style="font-size: 0.75rem; padding: 4px 10px; border-radius: 10px; background: var(--accent-glow); color: var(--accent-primary); font-weight: 600;"
+                    id="visual-card-badge">SYSTEMS</span>
+                  <span style="font-size: 0.8rem; font-weight: 700;" id="visual-card-val">v4.0.2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- FEATURED WORK / INTERACTIVE PANEL --- -->
+    <section id="interactive-panel" style="padding-top: 50px; padding-bottom: 50px;">
+      <div class="container">
+        <div class="role-widget-section">
+
+          <!-- 1. Developer Panel: Interactive Code Console -->
+          <div class="widget-container active" id="widget-dev">
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-align: center;">Interactive Developer Sandbox</h3>
+            <div class="code-console">
+              <div class="console-header">
+                <div class="console-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="console-title">developer@hyiaman: ~/stack</div>
+                <div style="width: 32px;"></div>
+              </div>
+              <div class="console-body" id="dev-console-body">
+                <div class="console-line"><span class="prompt">guest@hyiaman:~$</span>npm run dev</div>
+                <div class="console-line"><span class="comment">> launching modern stack portfolio...</span></div>
+                <div class="console-line"><span class="comment">> compiling assets [React, Laravel, Django,
+                    Python]</span></div>
+                <div class="console-line"><span class="prompt">guest@hyiaman:~$</span>cat skills.json</div>
+                <div class="console-line">
+                  {<br>
+                  &nbsp;&nbsp;<span class="keyword">"frontend"</span>: [<span class="string">"React"</span>, <span
+                    class="string">"JavaScript"</span>, <span class="string">"HTML5/CSS3"</span>],<br>
+                  &nbsp;&nbsp;<span class="keyword">"backend"</span>: [<span class="string">"Laravel"</span>, <span
+                    class="string">"Django"</span>, <span class="string">"PHP"</span>, <span
+                    class="string">"Python"</span>],<br>
+                  &nbsp;&nbsp;<span class="keyword">"databases"</span>: [<span class="string">"PostgreSQL"</span>, <span
+                    class="string">"MySQL"</span>, <span class="string">"SQLite"</span>]<br>
+                  }
+                </div>
+                <div class="console-line"><span class="prompt">guest@hyiaman:~$</span><span class="cursor"
+                    style="animation: pulse 1s infinite;">_</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Data Analyst Panel: Mini Dashboard -->
+          <div class="widget-container" id="widget-analyst">
+            <h3 style="font-size: 1.5rem; margin-bottom: 25px; text-align: center;">Key Analysis Performance Dashboard
+            </h3>
+            <div class="dashboard-grid">
+              <div class="chart-card">
+                <div class="chart-header">
+                  <div class="chart-title">Data Insights Trend Line</div>
+                  <div class="chart-metrics">
+                    <div>
+                      <div class="metric-number" id="dash-growth">+45%</div>
+                      <div class="metric-label">Insights Accuracy</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="svg-chart-container">
+                  <svg viewBox="0 0 500 200" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="chart-gradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="var(--accent-primary)" stop-opacity="0.3"></stop>
+                        <stop offset="100%" stop-color="var(--accent-primary)" stop-opacity="0"></stop>
+                      </linearGradient>
+                    </defs>
+                    <!-- Horizontal grid lines -->
+                    <line x1="0" y1="50" x2="500" y2="50" class="chart-grid-line"></line>
+                    <line x1="0" y1="100" x2="500" y2="100" class="chart-grid-line"></line>
+                    <line x1="0" y1="150" x2="500" y2="150" class="chart-grid-line"></line>
+
+                    <!-- Graph Path -->
+                    <path d="M 0 160 Q 100 130 150 90 T 300 70 T 400 30 T 500 10 L 500 200 L 0 200 Z"
+                      class="chart-area"></path>
+                    <path d="M 0 160 Q 100 130 150 90 T 300 70 T 400 30 T 500 10" class="chart-path"></path>
+
+                    <!-- Points -->
+                    <circle cx="150" cy="90" r="5" class="chart-point" data-val="Insights: 90%"></circle>
+                    <circle cx="300" cy="70" r="5" class="chart-point" data-val="Data Clean: 94%"></circle>
+                    <circle cx="400" cy="30" r="5" class="chart-point" data-val="SQL Optim: 98%"></circle>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="metrics-sidebar">
+                <div class="sidebar-metric">
+                  <div class="metric-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="12" y1="1" x2="12" y2="23"></line>
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 1.1rem; font-weight: 700;" id="analyst-metric-1">50M+ Rows</div>
+                    <div class="metric-label">Processed and Modelled</div>
+                  </div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="metric-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 1.1rem; font-weight: 700;" id="analyst-metric-2">Excel & PowerBI</div>
+                    <div class="metric-label">Automated Dashboard Dash</div>
+                  </div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="metric-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 1.1rem; font-weight: 700;" id="analyst-metric-3">99.8% Accuracy</div>
+                    <div class="metric-label">SQL Cleaning Integrity</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Founder Panel: Ventures Dashboard -->
+          <div class="widget-container" id="widget-founder">
+            <h3 style="font-size: 1.5rem; margin-bottom: 25px; text-align: center;">Active Venture & Roadmap</h3>
+            <div class="founder-pitch">
+              <div class="pitch-content">
+                <h3 id="founder-pitch-title">Building the Next Generation Saas</h3>
+                <p id="founder-pitch-desc">
+                  Driving vision, raising resources, and building engineering models to solve key consumer pain points.
+                  Growing organic reaches and creating sustainable product-market fits.
+                </p>
+                <div class="traction-stats">
+                  <div class="stat-item">
+                    <div class="stat-num" id="f-stat-1">10k+</div>
+                    <div class="stat-label">Active Users</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-num" id="f-stat-2">$150k</div>
+                    <div class="stat-label">ARR Pipeline</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-num" id="f-stat-3">5x</div>
+                    <div class="stat-label">Growth Rate</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pitch-graphic">
+                <div class="chart-title">Growth & Milestones Roadmap</div>
+                <div style="position: relative; margin-top: 20px;">
+                  <div class="stage-line">
+                    <div class="stage-progress-bar" id="founder-progress"></div>
+                  </div>
+                  <div class="venture-stage-indicator">
+                    <div class="stage-node active">
+                      <span>Concept</span>
+                    </div>
+                    <div class="stage-node active">
+                      <span>MVP</span>
+                    </div>
+                    <div class="stage-node active">
+                      <span>Launch</span>
+                    </div>
+                    <div class="stage-node">
+                      <span>Scale</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border: 1px solid var(--border-light); font-size: 0.85rem; color: var(--text-muted); margin-top: 15px;"
+                  id="founder-milestone-text">
+                  <strong>Current Stage: Launch & User Acquisition</strong><br>
+                  Expanding features, finalizing partnerships, and optimizing customer onboarding flows.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --- SHOWCASE SECTION --- -->
+    <section id="showcase" class="showcase">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle" id="showcase-subtitle">Selected Work</span>
+          <h2 class="section-title" id="showcase-title">Featured Ventures & Projects</h2>
+        </div>
+
+        <!-- Showcase Filter Navigation -->
+        <div class="showcase-filters">
+          <button class="filter-btn active" data-filter="all">All Specialties</button>
+          <button class="filter-btn" data-filter="dev">Software Engineering</button>
+          <button class="filter-btn" data-filter="analyst">Data Analysis</button>
+          <button class="filter-btn" data-filter="founder">Founder Ventures</button>
+        </div>
+
+        <!-- Project Grid Container -->
+        <div class="showcase-grid" id="project-grid">
+          <!-- Dynamic Project Cards inserted by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- --- SKILLS SECTION --- -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle" id="skills-subtitle">Technology Matrix</span>
+          <h2 class="section-title">Skills & Toolkit</h2>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Dynamic Skills Cards inserted by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- --- TIMELINE SECTION --- -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle" id="timeline-subtitle">My Journey</span>
+          <h2 class="section-title">Career Milestones</h2>
+        </div>
+
+        <div class="timeline" id="timeline-container">
+          <!-- Dynamic Timeline items inserted by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- --- CONTACT SECTION --- -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Collaborate</span>
+          <h2 class="section-title">Get In Touch</h2>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Email</div>
+                <a href="mailto:hello@hyiaman.me" class="contact-value">hello@hyiaman.me</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">GitHub</div>
+                <a href="https://github.com/Vol292" target="_blank" class="contact-value">github.com/Vol292</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Twitter / X</div>
+                <a href="#" class="contact-value">@hyiaman_me</a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST"
+            id="portfolio-contact-form">
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Let's build something amazing..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="justify-content: center; width: 100%;">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span>hyiaman.me</span>
+      </div>
+      <p style="font-size: 0.9rem; color: var(--text-muted);">&copy; 2026 Hyiaman. All rights reserved. Crafting code,
+        extracting metrics, scaling visions.</p>
+      <div class="social-links">
+        <a href="https://github.com/Vol292" target="_blank" aria-label="Github Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="#" aria-label="LinkedIn Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter X Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link JavaScript -->
+  <script src="app.js"></script>
+</body>
+
+</html>
